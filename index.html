@@ -2,21 +2,20 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3YT5JHNCLX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3YT5JHNCLX');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YT5JHNCLX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3YT5JHNCLX');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Lokesh Yadav | Cardiothoracic & Vascular Surgeon | Biratnagar, Nepal</title>
     <meta name="description" content="Professional profile of Dr. Lokesh Yadav, Consultant Cardiothoracic and Vascular Surgeon at Nobel Medical College, Biratnagar, Nepal. Includes credentials, publications, and professional background.">
     <meta name="keywords" content="Dr. Lokesh Yadav, Cardiothoracic Surgeon, Vascular Surgeon, Nobel Medical College, Biratnagar, Nepal, Cardiac Surgery, Research">
     <meta name="author" content="Dr. Lokesh Yadav">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="index, follow">
     <!-- Canonical URL -->
     <link rel="canonical" href="https://drlokeshyadav.com.np">
     
@@ -35,7 +34,7 @@
     <meta property="twitter:image" content="https://drlokeshyadav.com/images/dr-lokesh-yadav-twitter.jpg">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="Dr.Lokesh-Yadav.svg">
+     <link rel="icon" type="image/svg+xml" href="Dr.Lokesh-Yadav.svg">
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -45,6 +44,9 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Custom Styles -->
     <style>
@@ -112,8 +114,9 @@
         .hero-section {
             background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
             color: var(--dark-text);
-            padding: 150px 0 100px;
+            padding: 120px 0 80px;
             position: relative;
+            overflow: hidden;
         }
         
         .hero-content {
@@ -133,11 +136,11 @@
         }
         
        .doctor-portrait {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
         
         .professional-statement {
@@ -184,12 +187,18 @@
         
         .card:hover {
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transform: translateY(-5px);
         }
         
         .expertise-icon {
             font-size: 2rem;
             color: var(--primary-blue);
             margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .expertise-card:hover .expertise-icon {
+            transform: scale(1.1);
         }
         
         /* Buttons */
@@ -198,21 +207,25 @@
             border-color: var(--primary-blue);
             padding: 10px 25px;
             font-weight: 500;
+            transition: all 0.3s;
         }
         
         .btn-primary:hover {
             background-color: var(--secondary-blue);
             border-color: var(--secondary-blue);
+            transform: translateY(-2px);
         }
         
         .btn-outline-primary {
             color: var(--primary-blue);
             border-color: var(--primary-blue);
+            transition: all 0.3s;
         }
         
         .btn-outline-primary:hover {
             background-color: var(--primary-blue);
             border-color: var(--primary-blue);
+            transform: translateY(-2px);
         }
         
         /* Timeline */
@@ -256,6 +269,12 @@
             border-radius: 30px;
             margin: 5px;
             font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .language-badge:hover {
+            background-color: var(--primary-blue);
+            color: white;
         }
         
         /* Publications */
@@ -263,6 +282,11 @@
             border-left: 4px solid var(--primary-blue);
             padding-left: 20px;
             margin-bottom: 25px;
+            transition: all 0.3s;
+        }
+        
+        .publication-card:hover {
+            transform: translateX(5px);
         }
         
         .publication-title {
@@ -282,10 +306,12 @@
             color: var(--secondary-blue);
             text-decoration: none;
             font-size: 0.9rem;
+            transition: all 0.3s;
         }
         
         .publication-links a:hover {
             text-decoration: underline;
+            color: var(--primary-blue);
         }
         
         .research-badge {
@@ -302,6 +328,7 @@
         .research-badge:hover {
             border-color: var(--primary-blue);
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transform: translateY(-3px);
         }
         
         /* Affiliations */
@@ -309,11 +336,12 @@
             height: 60px;
             margin: 15px;
             opacity: 0.7;
-            transition: opacity 0.3s;
+            transition: opacity 0.3s, transform 0.3s;
         }
         
         .affiliation-logo:hover {
             opacity: 1;
+            transform: scale(1.05);
         }
         
         .affiliation-logo-container {
@@ -362,6 +390,7 @@
         
         .social-icon:hover {
             background-color: var(--primary-blue);
+            transform: translateY(-3px);
         }
         
         /* Google Business Profile Section */
@@ -411,6 +440,28 @@
             margin-top: 20px;
         }
         
+        /* Hospital Affiliation Section */
+        .hospital-affiliation-logo {
+            height: 60px;
+            margin-right: 20px;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
         /* Responsive */
         @media (max-width: 992px) {
             .hero-content {
@@ -437,11 +488,16 @@
                 margin-right: 0;
                 margin-bottom: 15px;
             }
+            
+            .hospital-affiliation-logo {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
         }
         
         @media (max-width: 768px) {
             .hero-section {
-                padding: 130px 0 80px;
+                padding: 100px 0 60px;
             }
             
             .section-padding {
@@ -511,7 +567,7 @@
     <section id="home" class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
+                <div class="hero-text fade-in-up">
                     <h1 class="display-5 mb-3">Dr. Lokesh Yadav</h1>
                     <h2 class="mb-3">Consultant Cardiothoracic & Vascular Surgeon</h2>
                     <h3 class="h4 mb-4 text-muted">Nobel Medical College & Teaching Hospital, Biratnagar, Nepal</h3>
@@ -521,7 +577,7 @@
                         <a href="#publications" class="btn btn-outline-primary">View Research Work</a>
                     </div>
                 </div>
-                <div class="hero-image">
+                <div class="hero-image fade-in-up" data-aos="fade-left" data-aos-delay="300">
                     <img src="Dr. lokesh Yadav.png" alt="Dr. Lokesh Yadav - Cardiothoracic & Vascular Surgeon" class="doctor-portrait">
                 </div>
             </div>
@@ -532,10 +588,17 @@
     <section id="about" class="section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
                     <h2 class="section-title">Professional Profile</h2>
-                    <p class="mb-4">Dr. Lokesh Yadav is a consultant cardiothoracic and vascular surgeon at Nobel Medical College & Teaching Hospital, Biratnagar, Nepal. With over six years of clinical and academic experience, his expertise covers complex cardiac, thoracic, and vascular procedures. His work combines surgical precision with compassionate, patient-centered care.</p>
-                    
+                    <p class="mb-4">
+                        Dr. Lokesh Yadav is a consultant cardiothoracic and vascular surgeon at 
+                        <a href="https://www.nobelmedicalcollege.com.np/" target="_blank" class="text-decoration-none text-primary fw-semibold">
+                            Nobel Medical College & Teaching Hospital
+                        </a>, Biratnagar, Nepal. 
+                        With over six years of clinical and academic experience, his expertise covers complex cardiac, thoracic, and vascular procedures. 
+                        His work combines surgical precision with compassionate, patient-centered care.
+                    </p>
+
                     <div class="mb-4">
                         <h4 class="mb-3">Languages</h4>
                         <div>
@@ -546,20 +609,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
                     <div class="card">
                         <div class="card-body p-4">
                             <h4 class="card-title mb-4">Hospital Affiliation</h4>
-                            <div class="d-flex">
-                                <div class="flex-shrink-0">
-                                    <i class="fas fa-hospital text-primary fa-2x"></i>
-                                </div>
-                                <div class="flex-grow-1 ms-3">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="images/nobel-logo.png" alt="Nobel Medical College" class="hospital-affiliation-logo">
+                                <div>
                                     <h5>Nobel Medical College & Teaching Hospital</h5>
                                     <p class="mb-2">Biratnagar, Nepal</p>
-                                    <p class="mb-0">A premier healthcare institution providing comprehensive medical services with state-of-the-art facilities for cardiothoracic and vascular surgery.</p>
                                 </div>
                             </div>
+                            <p class="mb-0">A premier healthcare institution providing comprehensive medical services with state-of-the-art facilities for cardiothoracic and vascular surgery.</p>
                         </div>
                     </div>
                 </div>
@@ -576,8 +638,8 @@
                 </div>
             </div>
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 text-center p-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 text-center p-4 expertise-card">
                         <div class="expertise-icon">
                             <i class="fas fa-heartbeat"></i>
                         </div>
@@ -585,8 +647,8 @@
                         <p>Coronary artery bypass grafting, valve repair and replacement, and aortic surgery.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 text-center p-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 text-center p-4 expertise-card">
                         <div class="expertise-icon">
                             <i class="fas fa-band-aid"></i>
                         </div>
@@ -594,8 +656,8 @@
                         <p>Surgical management of arterial and venous diseases, including aneurysms and peripheral vascular disease.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 text-center p-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 text-center p-4 expertise-card">
                         <div class="expertise-icon">
                             <i class="fas fa-baby"></i>
                         </div>
@@ -603,8 +665,8 @@
                         <p>Surgical correction of congenital heart defects in infants and children.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 text-center p-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 text-center p-4 expertise-card">
                         <div class="expertise-icon">
                             <i class="fas fa-dna"></i>
                         </div>
@@ -612,8 +674,8 @@
                         <p>Surgical treatment of lung cancer, esophageal cancer, and mediastinal tumors.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 text-center p-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card h-100 text-center p-4 expertise-card">
                         <div class="expertise-icon">
                             <i class="fas fa-lungs"></i>
                         </div>
@@ -634,7 +696,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 mb-5">
+                <div class="col-lg-6 mb-5" data-aos="fade-right">
                     <h3 class="mb-4">Education & Training</h3>
                     <div class="timeline">
                         <div class="timeline-item">
@@ -654,7 +716,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
                     <h3 class="mb-4">Fellowships & Specialized Training</h3>
                     <div class="timeline">
                         <div class="timeline-item">
@@ -683,28 +745,28 @@
                     <div class="card">
                         <div class="card-body p-4">
                             <div class="row text-center">
-                                <div class="col-md-3 col-6 mb-3">
+                                <div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="100">
                                     <div class="affiliation-logo-container">
                                         <img src="images/nobel-logo.png" alt="Nobel Medical College" class="affiliation-logo">
                                         <p class="mb-1 fw-bold">Nobel Medical College</p>
                                         <small class="text-muted">Teaching Hospital</small>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-6 mb-3">
+                                <div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="200">
                                     <div class="affiliation-logo-container">
                                         <img src="images/nmc-logo.png" alt="Nepal Medical Council" class="affiliation-logo">
                                         <p class="mb-1 fw-bold">Nepal Medical Council</p>
                                         <small class="text-muted">NMC</small>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-6 mb-3">
+                                <div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="300">
                                     <div class="affiliation-logo-container">
                                         <img src="images/pmc-logo.png" alt="Pakistan Medical Commission" class="affiliation-logo">
                                         <p class="mb-1 fw-bold">Pakistan Medical Commission</p>
                                         <small class="text-muted">PMC</small>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-6 mb-3">
+                                <div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="400">
                                     <div class="affiliation-logo-container">
                                         <img src="images/csn-logo.png" alt="Cardiac Society of Nepal" class="affiliation-logo">
                                         <p class="mb-1 fw-bold">Cardiac Society of Nepal</p>
@@ -730,18 +792,18 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                     <div class="publication-card">
-    <h4 class="publication-title">Cardiac Function Outcomes Following Mitral Valve Replacement: A Comparative Analysis of Different Surgical Techniques</h4>
-    <p class="publication-journal">Journal of Nobel Medical College</p>
-    <p>This study evaluated how different surgical techniques of Mitral Valve Replacement (MVR) affect heart function, particularly the Left Ventricular Ejection Fraction (LVEF), depending on whether parts of the mitral valve leaflets are preserved during surgery.</p>
-    <div class="publication-links">
-        <a href="https://www.nepjol.info/index.php/JoNMC/article/view/83327" target="_blank">
-            <i class="fas fa-external-link-alt me-1"></i> Read Publication
-        </a>
-    </div>
-</div>
+                    <div class="publication-card" data-aos="fade-up" data-aos-delay="100">
+                        <h4 class="publication-title">Cardiac Function Outcomes Following Mitral Valve Replacement: A Comparative Analysis of Different Surgical Techniques</h4>
+                        <p class="publication-journal">Journal of Nobel Medical College</p>
+                        <p>This study evaluated how different surgical techniques of Mitral Valve Replacement (MVR) affect heart function, particularly the Left Ventricular Ejection Fraction (LVEF), depending on whether parts of the mitral valve leaflets are preserved during surgery.</p>
+                        <div class="publication-links">
+                            <a href="https://www.nepjol.info/index.php/JoNMC/article/view/83327" target="_blank">
+                                <i class="fas fa-external-link-alt me-1"></i> Read Publication
+                            </a>
+                        </div>
+                    </div>
 
-<div class="publication-card">
+                    <div class="publication-card" data-aos="fade-up" data-aos-delay="200">
                         <h4 class="publication-title">Cardiothoracic and Vascular Surgery in Nepal: Current Status and Future Directions</h4>
                         <p class="publication-journal">ResearchGate</p>
                         <p>Comprehensive overview of the current state of cardiothoracic and vascular surgery in Nepal, with contributions to the field's advancement.</p>
@@ -752,7 +814,7 @@
                         </div>
                     </div>
 
-                    <div class="publication-card">
+                    <div class="publication-card" data-aos="fade-up" data-aos-delay="300">
                         <h4 class="publication-title">Successful Open Heart Surgery at Nobel: Removal of Thick Membrane</h4>
                         <p class="publication-journal">Makalu Khabar, 2023</p>
                         <p>A news report covering the successful open heart surgery performed by Dr. Yadav's team, removing a thick membrane in a complex cardiac case.</p>
@@ -763,7 +825,7 @@
                         </div>
                     </div>
                     
-                    <div class="publication-card">
+                    <div class="publication-card" data-aos="fade-up" data-aos-delay="400">
                         <h4 class="publication-title">Rare Tumor Successfully Removed in Nobel</h4>
                         <p class="publication-journal">Makalu Khabar, 2023</p>
                         <p>Coverage of a complex surgical case where Dr. Yadav successfully removed a rare tumor, showcasing advanced surgical skills in thoracic oncology.</p>
@@ -783,11 +845,11 @@
                 </div>
                 <div class="col-md-8 mx-auto">
                     <div class="d-flex flex-wrap justify-content-center">
-                        <a href="https://www.researchgate.net/scientific-contributions/Lokesh-Yadav-2197421124" target="_blank" class="research-badge">
+                        <a href="https://www.researchgate.net/scientific-contributions/Lokesh-Yadav-2197421124" target="_blank" class="research-badge" data-aos="zoom-in" data-aos-delay="100">
                             <i class="fab fa-researchgate fa-2x text-primary mb-2"></i>
                             <p class="mb-0">ResearchGate</p>
                         </a>
-                        <a href="https://www.csn.org.np/showmembers-222" target="_blank" class="research-badge">
+                        <a href="https://www.csn.org.np/showmembers-222" target="_blank" class="research-badge" data-aos="zoom-in" data-aos-delay="200">
                             <i class="fas fa-user-md fa-2x text-primary mb-2"></i>
                             <p class="mb-0">Cardiac Society of Nepal</p>
                         </a>
@@ -799,48 +861,47 @@
 
     <!-- Contact Section -->
     <section id="contact" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center mb-5">
-                <h2 class="section-title text-center">Contact Information</h2>
-            </div>
-        </div>
-
-        <div class="row">
-            <!-- LEFT: Contact Details -->
-              <div class="col-lg-6">
-        <div class="contact-info">
-            <div class="mb-3">
-                <h4 style="font-size: 1.6rem; font-weight: 600;">Dr. Lokesh Yadav</h4>
-                <h6 style="font-size: 1rem; color: #555;">Nobel Medical College & Teaching Hospital</h6>
-                <p class="mb-0">Kanchanbari, Biratnagar 56613, Nepal</p>
-            </div>
-                    <div class="mb-3">
-                        <p><i class="fas fa-envelope me-2 text-primary"></i> info@drlokeshyadav.com.np </p>
-                        <p><i class="fas fa-phone me-2 text-primary"></i> 021-466735 (Hospital Line)</p>
-                    </div>
-                    <div class="mt-4">
-                        <a href="#" target="_blank" class="btn btn-outline-primary">
-                            <i class="fas fa-map-marker-alt me-2"></i> View on Google Maps
-                        </a>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title text-center">Contact Information</h2>
                 </div>
             </div>
 
-            <!-- RIGHT: Google Map embed -->
-            <div class="col-lg-6">
-                <h4 class="mb-3">Location</h4>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3564.822766307727!2d87.2834863150424!3d26.657319983234396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef737390088449%3A0x89e661fc1823deb6!2sNobel%20Medical%20College!5e0!3m2!1sen!2snp!4v1729244800000!5m2!1sen!2snp"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+            <div class="row">
+                <!-- LEFT: Contact Details -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="contact-info">
+                        <div class="mb-3">
+                            <h4 style="font-size: 1.6rem; font-weight: 600;">Dr. Lokesh Yadav</h4>
+                            <h6 style="font-size: 1rem; color: #555;">Nobel Medical College & Teaching Hospital</h6>
+                            <p class="mb-0">Kanchanbari, Biratnagar 56613, Nepal</p>
+                        </div>
+                        <div class="mb-3">
+                            <p><i class="fas fa-envelope me-2 text-primary"></i> info@drlokeshyadav.com.np </p>
+                            <p><i class="fas fa-phone me-2 text-primary"></i> 021-466735 (Hospital Line)</p>
+                        </div>
+                        <div class="mt-4">
+                            <a href="#" target="_blank" class="btn btn-outline-primary">
+                                <i class="fas fa-map-marker-alt me-2"></i> View on Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Google Map embed -->
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <h4 class="mb-3">Location</h4>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3564.822766307727!2d87.2834863150424!3d26.657319983234396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef737390088449%3A0x89e661fc1823deb6!2sNobel%20Medical%20College!5e0!3m2!1sen!2snp!4v1729244800000!5m2!1sen!2snp"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -895,8 +956,19 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <!-- Custom JavaScript -->
     <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+        
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -924,17 +996,22 @@
                 navbar.classList.remove('scrolled');
             }
         });
+        
+        // Add loading animation to hero section
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroText = document.querySelector('.hero-text');
+            const heroImage = document.querySelector('.hero-image');
+            
+            if(heroText) {
+                heroText.classList.add('fade-in-up');
+            }
+            
+            if(heroImage) {
+                setTimeout(function() {
+                    heroImage.classList.add('fade-in-up');
+                }, 300);
+            }
+        });
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
