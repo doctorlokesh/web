@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Sitemap: https://drlokeshyadav.com.np/sitemap.xml
+
+# Allow CSS and JavaScript
+User-agent: *
+Allow: *.css
+Allow: *.js
+
+# Allow images
+User-agent: Googlebot-Image
+Allow: /
