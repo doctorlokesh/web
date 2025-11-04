@@ -10,3 +10,14 @@ Allow: *.js
 # Allow images
 User-agent: Googlebot-Image
 Allow: /
+
+# Allow AI search and summaries
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
