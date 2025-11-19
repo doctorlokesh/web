@@ -4,7 +4,7 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
+      "src": "/favicon-192.png",  // <--- KEY CHANGE HERE
       "sizes": "192x192",
       "type": "image/png"
     },
