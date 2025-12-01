@@ -504,6 +504,102 @@
                 padding: 60px 0;
             }
         }
+
+          /* Add these styles to your existing CSS */
+
+        /* About section image styling */
+        .about-image-container {
+            position: relative;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            float: left;
+        }
+
+        .about-image {
+            width: 250px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .about-image-container {
+                float: none;
+                margin-right: 0;
+                text-align: center;
+            }
+            
+            .about-image {
+                width: 200px;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Gallery section styling */
+        .gallery-section {
+            background-color: var(--light-bg);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
     
     <!-- JSON-LD Schema Markup -->
@@ -604,12 +700,17 @@
         </div>
     </section>
 
-    <!-- About Section -->
+     <!-- About Section -->
     <section id="about" class="section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="col-lg-8 mb-5 mb-lg-0">
                     <h2 class="section-title">Professional Profile</h2>
+                    
+                    <div class="about-image-container">
+                        <img src="lokesh-yadav.jpg" alt="Dr. Lokesh Yadav in professional setting" class="about-image">
+                    </div>
+                    
                     <p class="mb-4">
                         Dr. Lokesh Yadav is a consultant cardiothoracic and vascular surgeon at 
                         <a href="https://www.nobelmedicalcollege.com.np/" target="_blank" class="text-decoration-none text-primary fw-semibold">
@@ -617,6 +718,12 @@
                         </a>, Biratnagar, Nepal. 
                         With over six years of clinical and academic experience, his expertise covers complex cardiac, thoracic, and vascular procedures. 
                         His work combines surgical precision with compassionate, patient-centered care.
+                    </p>
+                    
+                    <p class="mb-4">
+                        Dr. Yadav completed his medical education at China Three Gorges University and pursued specialized training 
+                        in cardiothoracic and vascular surgery. His commitment to advancing surgical techniques and patient outcomes 
+                        is reflected in his active research contributions and clinical practice.
                     </p>
 
                     <div class="mb-4">
@@ -630,21 +737,21 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-body p-4">
-                            <h4 class="card-title mb-4">Hospital Affiliation</h4>
-                            <div class="d-flex align-items-center mb-3">
-                                <img src="images/nobel-logo.png" alt="Nobel Medical College" class="hospital-affiliation-logo">
-                                <div>
-                                    <h5>Nobel Medical College & Teaching Hospital</h5>
-                                    <p class="mb-2">Biratnagar, Nepal</p>
-                                </div>
-                            </div>
-                            <p class="mb-0">Nobel Medical College & Teaching Hospital is a leading institution providing medical education and healthcare services, affiliated with Kathmandu University. It delivers quality healthcare with modern facilities and a strong focus on community welfare.</p>
-                        </div>
-                    </div>
+                <div class="col-lg-4">
+    <div class="card">
+        <div class="card-body p-4">
+            <h4 class="card-title mb-4 text-center">Hospital Affiliation</h4>
+            <div class="text-center mb-4">
+                <img src="nobel-logo.png" alt="Nobel Medical College" class="hospital-affiliation-logo mb-3">
+                <div>
+                    <h5 class="mb-2">Nobel Medical College & Teaching Hospital</h5>
+                    <p class="mb-3 text-muted">Biratnagar, Nepal</p>
                 </div>
+            </div>
+            <p class="mb-0 text-center">Nobel Medical College & Teaching Hospital is a leading institution providing medical education and healthcare services, affiliated with Kathmandu University. It delivers quality healthcare with modern facilities and a strong focus on community welfare.</p>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </section>
@@ -757,6 +864,63 @@
                     </div>
                 </div>
             </div>
+
+            <!-- NEW Gallery Section -->
+    <section id="gallery" class="section-padding gallery-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title text-center">Gallery</h2>
+                    <p class="lead">Professional work and achievements</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="gallery-grid">
+                        <!-- Row 1 -->
+                        <div class="gallery-item">
+                            <img src="1.jpg" alt="Cardiac Surgery Procedure" class="gallery-img">
+                            <div class="gallery-caption">
+                                <small>Complex Cardiac Surgery</small>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/gallery/conference-1.jpg" alt="Medical Conference" class="gallery-img">
+                            <div class="gallery-caption">
+                                <small>Medical Conference Presentation</small>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/gallery/team-1.jpg" alt="Surgical Team" class="gallery-img">
+                            <div class="gallery-caption">
+                                <small>Surgical Team at Nobel Medical College</small>
+                            </div>
+                        </div>
+                        
+                        <!-- Row 2 -->
+                        <div class="gallery-item">
+                            <img src="images/gallery/award-1.jpg" alt="Professional Award" class="gallery-img">
+                            <div class="gallery-caption">
+                                <small>Professional Recognition</small>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/gallery/facility-1.jpg" alt="Hospital Facility" class="gallery-img">
+                            <div class="gallery-caption">
+                                <small>State-of-the-Art Surgical Facility</small>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/gallery/teaching-1.jpg" alt="Teaching Session" class="gallery-img">
+                            <div class="gallery-caption">
+                                <small>Teaching Medical Students</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
             
             <!-- Affiliations Section -->
             <div class="row mt-5">
@@ -1005,9 +1169,19 @@
                 navbar.classList.remove('scrolled');
             }
         });
+          <script>
+        // Add smooth scrolling for the new gallery section link in navigation
+        // (Add this to your existing nav items if you want the gallery in navigation)
+        // <li class="nav-item">
+        //     <a class="nav-link" href="#gallery">Gallery</a>
+        // </li>
+        
+        // Your existing JavaScript code remains the same
+    </script>
     </script>
 </body>
 </html>
+
 
 
 
