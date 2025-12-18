@@ -602,22 +602,50 @@
         }
     </style>
     
-    <!-- JSON-LD Schema Markup -->
-   <script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Physician",
+  "@id": "https://drlokeshyadav.com.np/#physician",
   "name": "Dr. Lokesh Yadav",
-  "image": "https://drlokeshyadav.com.np/dr-lokesh-yadav.png",
+  "url": "https://drlokeshyadav.com.np/",
   "jobTitle": "Consultant Cardiothoracic & Vascular Surgeon",
-  "medicalSpecialty": ["Cardiothoracic Surgery", "Vascular Surgery"],
-       "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Kanchanbari",
-    "addressLocality": "Biratnagar",
-    "postalCode": "56613",
-    "addressCountry": "NP"
-       },
+  "medicalSpecialty": [
+    "Cardiothoracic Surgery",
+    "Vascular Surgery"
+  ],
+  "image": [
+    "https://drlokeshyadav.com.np/dr-lokesh-yadav.png",
+    "https://drlokeshyadav.com.np/images/lokesh-yadav.jpg"
+  ],
+  "subjectOf": [
+    {
+      "@type": "ImageObject",
+      "@id": "https://drlokeshyadav.com.np/images/lokesh-yadav.jpg#image",
+      "contentUrl": "https://drlokeshyadav.com.np/images/lokesh-yadav.jpg",
+      "caption": "Dr. Lokesh Yadav, Consultant Cardiothoracic and Vascular Surgeon at Nobel Medical College, Biratnagar, Nepal",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Lokesh Yadav"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://drlokeshyadav.com.np/images/Dr-Lokesh-Surgeon.jpg#image",
+      "contentUrl": "https://drlokeshyadav.com.np/images/Dr-Lokesh-Surgeon.jpg",
+      "caption": "Dr. Lokesh Yadav performing cardiothoracic surgery at Nobel Medical College"
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://drlokeshyadav.com.np/images/Dr-Lokesh-Yadav-Patient.jpeg",
+      "caption": "Patient recovery after cardiac surgery"
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://drlokeshyadav.com.np/images/OT-Dr-Lokesh-Yadav-Nobel-Medical-College-Teaching-Hospital.jpg",
+      "caption": "Open heart surgery at Nobel Medical College Teaching Hospital"
+    }
+  ],
   "worksFor": {
     "@type": "Hospital",
     "name": "Nobel Medical College & Teaching Hospital",
@@ -629,17 +657,26 @@
       "addressCountry": "NP"
     }
   },
-  "alumniOf": "China Three Gorges University",
-  "description": "Dr. Lokesh Yadav is a consultant cardiothoracic and vascular surgeon at Nobel Medical College & Teaching Hospital, Biratnagar, Nepal, with over six years of experience in cardiac, thoracic, and vascular surgery.",
-  "url": "https://drlokeshyadav.com.np",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kanchanbari",
+    "addressLocality": "Biratnagar",
+    "postalCode": "56613",
+    "addressCountry": "NP"
+  },
+  "alumniOf": {
+    "@type": "University",
+    "name": "China Three Gorges University"
+  },
   "sameAs": [
     "https://www.linkedin.com/in/dr-lokesh-yadav/",
     "https://maps.app.goo.gl/fF8N9oMy9Q3tvWxt6",
     "https://www.researchgate.net/scientific-contributions/Lokesh-Yadav-2197421124",
     "https://www.nepjol.info/index.php/JoNMC/article/view/83327"
-  ]
+  ],
+  "description": "Dr. Lokesh Yadav is a consultant cardiothoracic and vascular surgeon at Nobel Medical College & Teaching Hospital, Biratnagar, Nepal, with over six years of experience in cardiac, thoracic, and vascular surgery."
 }
-    </script>
+</script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
@@ -1185,6 +1222,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 </body>
 </html>
+
 
 
 
