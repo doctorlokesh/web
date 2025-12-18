@@ -14,6 +14,41 @@
       <image:title>Dr Lokesh Yadav Profile Photo</image:title>
     </image:image>
 
+    <image:image>
+      <image:loc>https://drlokeshyadav.com.np/images/lokesh-yadav.jpg</image:loc>
+      <image:caption>Dr. Lokesh Yadav, Consultant Cardiothoracic and Vascular Surgeon</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://drlokeshyadav.com.np/images/Dr-Lokesh-Surgeon.jpg</image:loc>
+      <image:caption>Dr. Lokesh Yadav performing cardiothoracic surgery</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://drlokeshyadav.com.np/images/Dr-Lokesh-Yadav-Patient.jpeg</image:loc>
+      <image:caption>Patient recovery after cardiac surgery</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://drlokeshyadav.com.np/images/surgeon-Nobel-medical-collge-teaching-hospital.jpg</image:loc>
+      <image:caption>Surgical team at Nobel Medical College Teaching Hospital</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://drlokeshyadav.com.np/images/OT-Dr-Lokesh-Yadav-Nobel-Medical-College-Teaching-Hospital.jpg</image:loc>
+      <image:caption>Open heart surgery at Nobel Medical College Teaching Hospital</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://drlokeshyadav.com.np/images/Dr-Lokesh-Yadav-in-Operation-Theatre.jpg</image:loc>
+      <image:caption>Dr. Lokesh Yadav in the operation theatre</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://drlokeshyadav.com.np/images/CTVS-Surgery-Dr-Lokesh-Yadav.jpeg</image:loc>
+      <image:caption>Pericardiectomy surgery performed by Dr. Lokesh Yadav</image:caption>
+    </image:image>
+
   </url>
 
 </urlset>
