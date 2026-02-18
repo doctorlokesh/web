@@ -2,6 +2,9 @@ User-agent: *
 Allow: /
 Sitemap: https://drlokeshyadav.com.np/sitemap.xml
 
+# Help AI models find your profile summary
+llms: https://drlokeshyadav.com.np/llms.txt
+
 # Allow CSS and JavaScript
 User-agent: *
 Allow: *.css
